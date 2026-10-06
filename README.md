@@ -45,36 +45,32 @@ plaintext
 | Reverse Proxy | Nginx |
 
 ## Project Structure
+
+```text
 aws-devops-platform/
-├── app/ # Node.js application
-│ ├── src/server.js # API endpoints
-│ ├── tests/health.test.js # Unit tests
-│ ├── package.json
-│ └── Dockerfile
-├── terraform/ # AWS infrastructure
-│ ├── provider.tf
-│ ├── variables.tf
-│ ├── vpc.tf
-│ ├── security.tf
-│ ├── ec2.tf
-│ ├── ecr.tf
-│ ├── iam.tf
-│ ├── outputs.tf
-│ └── terraform.tfvars.example
-├── scripts/ # Deployment helpers
-│ ├── deploy.sh
-│ └── health-check.sh
-├── .github/workflows/
-│ └── deploy.yml # CI/CD pipeline
-├── config/
-│ └── nginx-app.conf # Nginx configuration
-├── docs/ # Documentation
-│ ├── architecture.md
-│ └── deployment.md
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── app/
+│   ├── src/
+│   │   └── server.js
+│   ├── tests/
+│   │   └── health.test.js
+│   ├── Dockerfile
+│   ├── package-lock.json
+│   └── package.json
+├── terraform/
+│   ├── ec2.tf
+│   ├── ecr.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── security.tf
+│   ├── terraform.tfvars
+│   ├── variables.tf
+│   └── vpc.tf
 ├── .gitignore
-├── README.md
-└── LICENSE
-plaintext
+└── README.md
+```
 
 ## License
 MIT
@@ -111,7 +107,7 @@ Copyright (c) 2026 raheelfida
 
 ### 4. Result
 - ✅ Deployment complete — typically **under 45 seconds**
-- 🌐 App accessible at: **http://34.201.210.235**
+- 🌐 App accessible at: **http://<IP_ADDRESS>**
 
 ---
 
@@ -124,7 +120,7 @@ cd aws-devops-platform
 
 # Configure SSH key
 chmod 600 ~/.ssh/aws-devops-key
-ssh -i ~/.ssh/aws-devops-key ubuntu@34.201.210.235
+ssh -i ~/.ssh/aws-devops-key ubuntu@<IP_ADDRESS>
 
 # Run locally
 cd app
@@ -137,12 +133,13 @@ Secret Name	Purpose
 AWS_ACCESS_KEY_ID	AWS programmatic access key ID
 AWS_SECRET_ACCESS_KEY	AWS programmatic secret key
 EC2_SSH_PRIVATE_KEY	Full SSH private key block (including BEGIN/END lines)
+EC2_HOST	Public IP address or DNS name of the deployment EC2 instance
 📊 AWS Resources (us-east-1)
 Table
 Resource	Value
 Account ID	449952321810
 EC2 Instance ID	i-0ecd9ddd496164a98
-Public IP	34.201.210.235
+Public IP	<IP_ADDRESS>
 ECR Registry	449952321810.dkr.ecr.us-east-1.amazonaws.com
 ECR Repository	aws-devops-platform-repo
 SSH Key Name	aws-devops-platform-ssh-key
@@ -156,7 +153,7 @@ Dockerfile & container build	✅ Verified
 ECR repository & authentication	✅ Active
 GitHub Actions pipeline	✅ Fully automated
 EC2 SSH deployment	✅ Operational
-Live endpoint accessibility	✅ http://34.201.210.235
+Live endpoint accessibility	✅ http://<IP_ADDRESS>
 Auto-deploy on code push	✅ Working
 🚀 Usage
 bash
