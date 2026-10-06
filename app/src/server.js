@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     application: "AWS DevOps Platform",
     status: "running",
     version: VERSION,
-    author: "Muhammad Islah Uddin"
+    author: "raheelfida"
   });
 });
 
@@ -37,4 +37,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-

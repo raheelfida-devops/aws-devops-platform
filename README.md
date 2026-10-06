@@ -1,7 +1,6 @@
 # AWS DevOps CI/CD Platform
 
-> **Muhammad Islah Uddin** | [LinkedIn](https://linkedin.com/in/muhammad-islah-uddin-941335196)
-> BSCS Graduate | Aspiring DevOps & Cloud Engineer
+> **raheelfida** | [GitHub](https://github.com/raheelfida-devops)
 
 ## Overview
 Complete production-style DevOps platform: code commit → automated test → Docker build → security scan → ECR push → EC2 deployment → health check.
@@ -87,7 +86,7 @@ Paste:
 plaintext
 MIT License
 
-Copyright (c) 2026 Muhammad Islah Uddin
+Copyright (c) 2026 raheelfida
 
 
 ## 🔧 How It Works
@@ -120,7 +119,7 @@ Copyright (c) 2026 Muhammad Islah Uddin
 
 ```bash
 # Clone repository
-git clone https://github.com/MuhammadIslahUddin/aws-devops-platform.git
+git clone https://github.com/raheelfida-devops/aws-devops-platform.git
 cd aws-devops-platform
 
 # Configure SSH key
@@ -167,12 +166,11 @@ git commit -m "feat: Add new feature"
 git push
 
 # Monitor progress
-# → https://github.com/MuhammadIslahUddin/aws-devops-platform/actions
+# → https://github.com/raheelfida-devops/aws-devops-platform/actions
 📅 Timeline
 Oct 2, 2026 — Initial deployment platform goes live ✅
 Next — OIDC migration, testing gates, monitoring, IP restriction
 👤 Author
-Muhammad Islah Uddin
-GitHub: @MuhammadIslahUddin
+raheelfida
+GitHub: @raheelfida-devops
 Project: aws-devops-platform
-
